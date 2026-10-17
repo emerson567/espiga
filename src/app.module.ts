@@ -3,6 +3,7 @@ import { APP_GUARD } from '@nestjs/core';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { opcionesBaseDatos } from './base-datos/opciones.js';
+import { ChatModule } from './chat/chat.module.js';
 import { NegocioModule } from './negocio/negocio.module.js';
 import { PedidosModule } from './pedidos/pedidos.module.js';
 import { SaludController } from './salud.controller.js';
@@ -16,6 +17,7 @@ import { UsuariosModule } from './usuarios/usuarios.module.js';
     NegocioModule,
     UsuariosModule,
     PedidosModule,
+    ChatModule,
   ],
   controllers: [SaludController],
   providers: [{ provide: APP_GUARD, useClass: ThrottlerGuard }],
