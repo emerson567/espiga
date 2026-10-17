@@ -1,0 +1,40 @@
+{
+  "name": "espiga-pro",
+  "version": "2.0.0",
+  "description": "Proyecto de la Panaderia La Espiga: API con PostgreSQL, usuarios, roles, chatbot local y servidor MCP",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/main.js",
+    "migracion:generar": "tsc && typeorm migration:generate -d dist/base-datos/fuente.js",
+    "migracion:correr": "tsc && typeorm migration:run -d dist/base-datos/fuente.js",
+    "migracion:revertir": "tsc && typeorm migration:revert -d dist/base-datos/fuente.js",
+    "semilla": "tsc && node dist/base-datos/semilla.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/node": "^2.1.1",
+    "@modelcontextprotocol/server": "^2.3.1",
+    "@nestjs/common": "^12.0.1",
+    "@nestjs/core": "^12.0.1",
+    "@nestjs/jwt": "^12.0.3",
+    "@nestjs/platform-express": "^12.0.1",
+    "@nestjs/swagger": "^12.0.2",
+    "@nestjs/throttler": "^6.7.1",
+    "@nestjs/typeorm": "^12.0.2",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "helmet": "^8.3.0",
+    "pg": "^8.23.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "typeorm": "^1.1.2",
+    "zod": "^4.2.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "^2.3.1",
+    "@types/express": "^5.0.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^6.0.2"
+  }
+}

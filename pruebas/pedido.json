@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "producto": "pandebono", "cantidad": 10 },
+    { "producto": "bunuelo", "cantidad": 5 }
+  ],
+  "domicilio": true,
+  "direccion": "Carrera 4 # 6-21"
+}

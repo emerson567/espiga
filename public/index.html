@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panadería La Espiga</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>Panadería La Espiga</h1>
+      <p class="nota" id="quien">Asistente de práctica. Responde un modelo que corre en este equipo.</p>
+    </div>
+    <button id="salir" class="secundario" hidden>Salir</button>
+  </header>
+
+  <form id="acceso" class="tarjeta">
+    <h2 id="tituloAcceso">Entrar</h2>
+    <label id="campoNombre" hidden>Nombre <input id="nombre" maxlength="100" autocomplete="name"></label>
+    <label>Correo <input id="correo" type="email" required autocomplete="email"></label>
+    <label>Clave <input id="clave" type="password" required minlength="10" autocomplete="current-password"></label>
+    <p id="errorAcceso" class="error" role="alert"></p>
+    <button id="botonAcceso">Entrar</button>
+    <button type="button" id="cambiarModo" class="enlace">¿No tiene cuenta? Regístrese</button>
+  </form>
+
+  <section id="chat" hidden>
+    <div id="mensajes"></div>
+    <form id="formulario">
+      <input id="texto" maxlength="500" placeholder="Escriba su mensaje" autocomplete="off" required>
+      <button id="enviar">Enviar</button>
+    </form>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
